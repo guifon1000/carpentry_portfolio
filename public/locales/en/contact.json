@@ -1,0 +1,64 @@
+{
+  "hero": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch for a free consultation"
+  },
+  "getInTouch": {
+    "title": "Get In Touch",
+    "description": "We'd love to hear about your project. Reach out to us using the form or contact details below."
+  },
+  "contactInfo": [
+    {
+      "title": "Email",
+      "content": "guillaume.fontai@gmail.com"
+    },
+    {
+      "title": "Phone",
+      "content": "(+33) 6 40 48 27 18"
+    },
+    {
+      "title": "Address",
+      "content": "2606 chemin de Draguignan, 83440 Fayence, France"
+    },
+    {
+      "title": "Hours",
+      "content": "Monday - Friday: 9AM - 5PM\nSaturday: 10AM - 3PM\nSunday: Closed"
+    }
+  ],
+  "form": {
+    "title": "Send Us a Message",
+    "fields": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone (optional)",
+      "service": "Service Interested In",
+      "selectService": "Select a service",
+      "message": "Message"
+    },
+    "services": {
+      "furniture": "Custom Furniture",
+      "kitchen": "Kitchen Renovations",
+      "builtins": "Built-in Shelving",
+      "flooring": "Wooden Floors",
+      "outdoor": "Outdoor Structures",
+      "trim": "Trim & Molding",
+      "other": "Other (please specify)"
+    },
+    "buttons": {
+      "send": "Send Message",
+      "sending": "Sending..."
+    },
+    "success": {
+      "title": "Thank You!",
+      "message": "Your message has been sent successfully. We'll get back to you shortly.",
+      "button": "Send Another Message"
+    },
+    "error": {
+      "general": "Failed to send message. Please try again."
+    }
+  },
+  "map": {
+    "title": "Our Location",
+    "placeholder": "Map would be embedded here in production."
+  }
+}

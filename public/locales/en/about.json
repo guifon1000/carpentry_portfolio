@@ -1,0 +1,29 @@
+{
+  "hero": {
+    "title": "About Fontaine Charpente & Conception",
+    "subtitle": "Combining scientific expertise with artisanal craftsmanship"
+  },
+  "ourStory": {
+    "title": "My Journey",
+    "content": [
+      "As a thermal engineer and PhD in fluid mechanics, I chose to trade my theoretical calculations for direct contact with materials. This career change to carpentry answered two deep aspirations: the desire to learn to work better with my hands using this noble material that is wood, and a genuine fascination for the Art of Timber Framing Layout.",
+      "This ancestral discipline, which allows creating 3D geometry with deceptively simple tools, captivated the mathematician I have always been. Trained at the Association Ouvrière des Compagnons du Devoir, I obtained a professional qualification in wood construction as well as a vocational diploma in timber framing."
+    ]
+  },
+  "ourTeam": {
+    "title": "My Expertise",
+    "content": [
+      "This dual training - scientific and artisanal - allows me to approach each project with a unique perspective: sizing structures thanks to my mechanical engineering skills, designing optimized insulation systems through my thermal expertise, and creating precise technical drawings thanks to my CAD skills."
+    ]
+  },
+  "ourApproach": {
+    "title": "My Approach",
+    "content": [
+      "I specialize in small traditional timber framing, wood frame construction, and custom creations, always working in close collaboration with my clients. Each project becomes a new adventure where tradition and innovation meet to bring your ideas to life in the Canton of Fayence."
+    ]
+  },
+  "image": {
+    "src": "/images/guillaume-fontaine-atelier.jpg",
+    "alt": "Guillaume Fontaine in his workshop"
+  }
+}

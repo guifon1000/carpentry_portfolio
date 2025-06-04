@@ -1,0 +1,64 @@
+{
+  "hero": {
+    "title": "Contactez-Nous",
+    "subtitle": "Prenez contact pour une consultation gratuite"
+  },
+  "getInTouch": {
+    "title": "Prenez Contact",
+    "description": "Nous aimerions entendre parler de votre projet. Contactez-nous en utilisant le formulaire ou les coordonnées ci-dessous."
+  },
+  "contactInfo": [
+    {
+      "title": "Email",
+      "content": "guillaume.fontai@gmail.com"
+    },
+    {
+      "title": "Téléphone",
+      "content": "06 40 48 27 18"
+    },
+    {
+      "title": "Adresse",
+      "content": "2606 chemin de Draguignan, 83440 Fayence, France"
+    },
+    {
+      "title": "Horaires",
+      "content": "Lundi - Vendredi: 9h - 17h\nSamedi: 10h - 15h\nDimanche: Fermé"
+    }
+  ],
+  "form": {
+    "title": "Envoyez-Nous un Message",
+    "fields": {
+      "name": "Nom",
+      "email": "Email",
+      "phone": "Téléphone (optionnel)",
+      "service": "Service qui vous intéresse",
+      "selectService": "Sélectionnez un service",
+      "message": "Message"
+    },
+    "services": {
+      "furniture": "Mobilier sur mesure",
+      "kitchen": "Rénovation de cuisine",
+      "builtins": "Étagères intégrées",
+      "flooring": "Planchers en bois",
+      "outdoor": "Structures extérieures",
+      "trim": "Moulures et finitions",
+      "other": "Autre (veuillez préciser)"
+    },
+    "buttons": {
+      "send": "Envoyer le message",
+      "sending": "Envoi en cours..."
+    },
+    "success": {
+      "title": "Merci !",
+      "message": "Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais.",
+      "button": "Envoyer un autre message"
+    },
+    "error": {
+      "general": "Échec de l'envoi du message. Veuillez réessayer."
+    }
+  },
+  "map": {
+    "title": "Notre Emplacement",
+    "placeholder": "..."
+  }
+}

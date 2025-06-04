@@ -1,0 +1,33 @@
+{
+  "hero": {
+    "title": "Fontaine : Charpente & Conception",
+    "subtitle": "Vous accompagner dans la conception et la construction de votre projet",
+    "cta": "Voir Notre Travail"
+  },
+  "services": {
+    "title": "Nos Services"
+  },
+  "projects": {
+    "title": "Projets en Vedette",
+    "items": [
+      {
+        "title": "Meubles de Cuisine Modernes",
+        "description": "Armoires de cuisine personnalisées avec finitions premium.",
+        "imageUrl": "/images/placeholder.jpg",
+        "slug": "modern-kitchen-cabinets"
+      },
+      {
+        "title": "Terrasse Extérieure",
+        "description": "Terrasse spacieuse avec sièges intégrés et pergola.",
+        "imageUrl": "/images/placeholder.jpg",
+        "slug": "outdoor-deck"
+      },
+      {
+        "title": "Bibliothèque Intégrée",
+        "description": "Bibliothèque personnalisée de mur à mur avec éclairage intégré.",
+        "imageUrl": "/images/placeholder.jpg",
+        "slug": "built-in-bookshelf"
+      }
+    ]
+  }
+}

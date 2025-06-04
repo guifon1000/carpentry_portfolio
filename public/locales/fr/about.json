@@ -1,0 +1,29 @@
+{
+  "hero": {
+    "title": "À Propos de Fontaine Charpente & Conception",
+    "subtitle": "Allier expertise scientifique et savoir-faire artisanal"
+  },
+  "ourStory": {
+    "title": "Mon Parcours",
+    "content": [
+      "Ingénieur en thermique et docteur en mécanique des fluides, j'ai choisi de troquer mes calculs théoriques contre le contact direct avec la matière. Cette reconversion vers la charpente répondait à deux aspirations profondes : l'envie d'apprendre à mieux travailler de mes mains avec ce matériau noble qu'est le bois, et une véritable fascination pour l'Art du Trait de Charpente.",
+      "Cette discipline ancestrale, qui permet de réaliser de la géométrie en 3D avec des outils d'une simplicité déconcertante, a conquis le matheux que j'ai toujours été. Formé à l'Association Ouvrière des Compagnons du Devoir, j'ai obtenu un titre professionnel en construction bois ainsi qu'un BP charpentier bois."
+    ]
+  },
+  "ourTeam": {
+    "title": "Mon Expertise",
+    "content": [
+      "Cette double formation - scientifique et artisanale - me permet d'aborder chaque projet avec un regard unique : dimensionner des structures grâce à mes compétences en mécanique, concevoir des complexes d'isolation optimisés par ma maîtrise de la thermique, et réaliser des dessins techniques précis grâce à mes compétences en CAO."
+    ]
+  },
+  "ourApproach": {
+    "title": "Mon Approche",
+    "content": [
+      "Je me spécialise dans la petite charpente traditionnelle, l'ossature bois et les créations sur mesure, toujours en étroite collaboration avec mes clients. Chaque projet devient une nouvelle aventure où tradition et innovation se rencontrent pour donner vie à vos idées dans le Canton de Fayence."
+    ]
+  },
+  "image": {
+    "src": "/images/guillaume-fontaine-atelier.jpg",
+    "alt": "Guillaume Fontaine dans son atelier"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "hero": {
+    "title": "Quality Craftsmanship For Your Home",
+    "subtitle": "We create beautiful wooden furniture and home fixtures that combine tradition with modern style.",
+    "cta": "View Our Work"
+  },
+  "services": {
+    "title": "Our Services"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "items": [
+      {
+        "title": "Modern Kitchen Cabinets",
+        "description": "Custom kitchen cabinets with premium finishes.",
+        "imageUrl": "/images/placeholder.jpg",
+        "slug": "modern-kitchen-cabinets"
+      },
+      {
+        "title": "Outdoor Deck",
+        "description": "Spacious deck with built-in seating and pergola.",
+        "imageUrl": "/images/placeholder.jpg",
+        "slug": "outdoor-deck"
+      },
+      {
+        "title": "Built-in Bookshelf",
+        "description": "Wall-to-wall custom bookshelf with integrated lighting.",
+        "imageUrl": "/images/placeholder.jpg",
+        "slug": "built-in-bookshelf"
+      }
+    ]
+  }
+}
