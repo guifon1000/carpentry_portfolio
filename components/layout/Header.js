@@ -6,6 +6,7 @@ import { useTranslation } from 'next-i18next';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const router = useRouter();
   const { t, i18n } = useTranslation('common');
   
@@ -23,27 +24,43 @@ const Header = () => {
     const newLang = i18n.language === 'fr' ? 'en' : 'fr';
     router.push(router.pathname, router.asPath, { locale: newLang });
   };
-  //<li><Link href="/services" className="nav-link">{t('nav.services')}</Link></li>
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  };
+
   return (
-    <header className={`header ${isScrolled ? 'header--scrolled' : ''}`}>
+    <header className={`header ${isScrolled ? 'header--scrolled' : ''} ${mobileMenuOpen ? 'mobile-menu-open' : ''}`}>
       <div className="header__logo">
         <Link href="/" className="logo-link">
           <img src="/images/logo.svg" alt="Logo" className="logo-image" />
         </Link>
       </div>
       
-      <nav className="header__nav">
-        <ul className="nav__list">
-          <li><Link href="/" className="nav-link">{t('nav.home')}</Link></li>
-          <li><Link href="/about" className="nav-link">{t('nav.about')}</Link></li>
-          <li><Link href="/portfolio" className="nav-link">{t('nav.portfolio')}</Link></li>
-          <li><Link href="/contact" className="nav-link">{t('nav.contact')}</Link></li>
-        </ul>
-      </nav>
-      
-      <button onClick={toggleLanguage} className="language-toggle">
-        {i18n.language === 'fr' ? 'EN' : 'FR'}
+      <button className="mobile-menu-toggle" onClick={toggleMobileMenu} aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
+      
+      <div className="header__nav-container">
+        <nav className="header__nav">
+          <ul className="nav__list">
+            <li><Link href="/" className="nav-link" onClick={closeMobileMenu}>{t('nav.home')}</Link></li>
+            <li><Link href="/about" className="nav-link" onClick={closeMobileMenu}>{t('nav.about')}</Link></li>
+            <li><Link href="/portfolio" className="nav-link" onClick={closeMobileMenu}>{t('nav.portfolio')}</Link></li>
+            <li><Link href="/contact" className="nav-link" onClick={closeMobileMenu}>{t('nav.contact')}</Link></li>
+          </ul>
+        </nav>
+        
+        <button onClick={toggleLanguage} className="language-toggle">
+          {i18n.language === 'fr' ? 'EN' : 'FR'}
+        </button>
+      </div>
     </header>
   );
 };
