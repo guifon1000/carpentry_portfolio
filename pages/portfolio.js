@@ -41,7 +41,7 @@ export default function Portfolio({ projects, categories }) {
         </div>
       </section>
       
-      <section className="portfolio-filter">
+{/*       <section className="portfolio-filter">
         <div className="container">
           <div className="filter-options">
             <button 
@@ -61,7 +61,7 @@ export default function Portfolio({ projects, categories }) {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
       
       <section className="portfolio-grid">
         <div className="container">

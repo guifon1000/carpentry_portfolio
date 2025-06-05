@@ -57,7 +57,8 @@ export function getPortfolioCategories() {
       description: jsonData.description || '',
       imageUrl: thumbnailImage,
       slug: category,
-      category: jsonData.category || 'Uncategorized'
+      category: jsonData.category || 'Uncategorized',
+      featured: jsonData.featured || false
     };
   });
 }
@@ -153,4 +154,16 @@ export function getAllProjectSlugs() {
     const jsonPath = path.join(PORTFOLIO_DIR, dir, 'portfolio-topic.json');
     return fs.existsSync(jsonPath);
   }).map(slug => ({ params: { projectSlug: slug } }));
+}
+
+/**
+ * Gets featured projects only
+ * Server-side only function
+ */
+export function getFeaturedProjects() {
+  // Get all projects
+  const allProjects = getPortfolioCategories();
+  
+  // Filter to only featured projects
+  return allProjects.filter(project => project.featured === true);
 }
