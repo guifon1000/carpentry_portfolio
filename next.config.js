@@ -1,4 +1,20 @@
 /** @type {import('next').NextConfig} */
+const nextConfig = {
+  experimental: {
+    // Reduce workers to prevent resource exhaustion
+    workerThreads: false,
+    cpus: 1
+  },
+  // Alternative: disable parallel builds entirely
+  webpack: (config, { dev }) => {
+    if (!dev) {
+      config.optimization.minimize = false;
+    }
+    return config;
+  }
+}
+
+module.exports = nextConfig
 const { i18n } = require('./next-i18next.config');
 
 // For static export, we need to disable the i18n configuration
