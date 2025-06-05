@@ -35,17 +35,17 @@ const Header = () => {
 
   return (
     <header className={`header ${isScrolled ? 'header--scrolled' : ''} ${mobileMenuOpen ? 'mobile-menu-open' : ''}`}>
-      <div className="header__logo">
-        <Link href="/" className="logo-link">
-          <img src="/images/logo.svg" alt="Logo" className="logo-image" />
-        </Link>
-      </div>
-      
       <button className="mobile-menu-toggle" onClick={toggleMobileMenu} aria-label="Toggle menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
+      
+      <div className="header__logo">
+        <Link href="/" className="logo-link">
+          <img src="/images/logo.svg" alt="Logo" className="logo-image" />
+        </Link>
+      </div>
       
       <div className="header__nav-container">
         <nav className="header__nav">

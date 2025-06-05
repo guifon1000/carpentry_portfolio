@@ -57,6 +57,7 @@ h1, h2, h3, h4, h5, h6 {
 .header__logo {
   display: flex;
   align-items: center;
+  order: 1;
 }
 
 .logo-image {
@@ -67,6 +68,7 @@ h1, h2, h3, h4, h5, h6 {
 .header__nav-container {
   display: flex;
   align-items: center;
+  order: 2;
 }
 
 .header__nav {
@@ -120,6 +122,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   cursor: pointer;
   z-index: 20;
+  order: 0;
 }
 
 .mobile-menu-toggle span {
@@ -127,7 +130,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   height: 2px;
   width: 100%;
-  background: var(--primary-color);
+  background: #000;
   border-radius: 2px;
   opacity: 1;
   left: 0;
@@ -675,24 +678,33 @@ section h2 {
     display: block;
   }
   
+  .header__logo {
+    order: 2;
+  }
+  
+  .mobile-menu-toggle {
+    order: 0;
+  }
+  
   .header__nav-container {
     position: fixed;
     top: 0;
-    right: -100%;
+    left: -100%;
     width: 70%;
     max-width: 300px;
     height: 100vh;
     background-color: white;
     padding: 5rem 2rem 2rem;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
     flex-direction: column;
     align-items: flex-start;
-    transition: right 0.3s ease;
+    transition: left 0.3s ease;
     z-index: 10;
+    order: 1;
   }
   
   .mobile-menu-open .header__nav-container {
-    right: 0;
+    left: 0;
   }
   
   .nav__list {
