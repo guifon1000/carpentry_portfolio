@@ -1,14 +1,31 @@
-import fs from 'fs';
-import path from 'path';
+// For server-side only imports
+let path;
+let fs;
+
+// Only require these modules on the server side
+if (typeof window === 'undefined') {
+  path = require('path');
+  fs = require('fs');
+}
 
 // Base directory for portfolio content
-const PORTFOLIO_DIR = path.join(process.cwd(), 'public', 'portfolio');
+const getPortfolioDir = () => {
+  if (typeof window !== 'undefined') return '';
+  return path.join(process.cwd(), 'public', 'portfolio');
+};
 
 /**
  * Gets all portfolio categories by scanning the portfolio directory
- * Each subfolder with a portfolio-topic.json file is considered a category
+ * Server-side only function
  */
 export function getPortfolioCategories() {
+  // Ensure we're on the server
+  if (typeof window !== 'undefined') {
+    return [];
+  }
+
+  const PORTFOLIO_DIR = getPortfolioDir();
+  
   // Ensure the portfolio directory exists
   if (!fs.existsSync(PORTFOLIO_DIR)) {
     return [];
@@ -47,8 +64,15 @@ export function getPortfolioCategories() {
 
 /**
  * Gets all images for a specific category
+ * Server-side only function
  */
 export function getImagesForCategory(category) {
+  // Ensure we're on the server
+  if (typeof window !== 'undefined') {
+    return [];
+  }
+
+  const PORTFOLIO_DIR = getPortfolioDir();
   const categoryDir = path.join(PORTFOLIO_DIR, category);
   
   // Ensure the directory exists
@@ -72,8 +96,15 @@ export function getImagesForCategory(category) {
 
 /**
  * Gets the detailed data for a specific project
+ * Server-side only function
  */
 export function getProjectData(slug) {
+  // Ensure we're on the server
+  if (typeof window !== 'undefined') {
+    return null;
+  }
+
+  const PORTFOLIO_DIR = getPortfolioDir();
   const jsonPath = path.join(PORTFOLIO_DIR, slug, 'portfolio-topic.json');
   
   // Check if the project exists
@@ -97,8 +128,16 @@ export function getProjectData(slug) {
 
 /**
  * Gets all project slugs for static path generation
+ * Server-side only function
  */
 export function getAllProjectSlugs() {
+  // Ensure we're on the server
+  if (typeof window !== 'undefined') {
+    return [];
+  }
+
+  const PORTFOLIO_DIR = getPortfolioDir();
+  
   // Ensure the portfolio directory exists
   if (!fs.existsSync(PORTFOLIO_DIR)) {
     return [];

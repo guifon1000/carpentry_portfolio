@@ -5,7 +5,7 @@ import Layout from '../components/layout/Layout';
 import ProjectCard from '../components/ui/ProjectCard';
 import { getPortfolioCategories } from '../utils/portfolioUtils';
 
-export async function getStaticProps({ locale = 'en' }) {
+export async function getServerSideProps({ locale = 'en' }) {
   // Get all portfolio categories
   const projects = getPortfolioCategories();
   

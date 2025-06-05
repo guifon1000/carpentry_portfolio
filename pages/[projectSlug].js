@@ -7,20 +7,8 @@ import Link from 'next/link';
 import Button from '../components/ui/Button';
 import { getAllProjectSlugs, getProjectData } from '../utils/portfolioUtils';
 
-// This function gets called at build time
-export async function getStaticPaths() {
-  // Get all project slugs
-  const paths = getAllProjectSlugs();
-  
-  return { 
-    paths, 
-    // For static export, we need to set fallback to false
-    fallback: false
-  };
-}
-
-// This also gets called at build time
-export async function getStaticProps({ params, locale = 'en' }) {
+// For server-side rendering instead of static generation
+export async function getServerSideProps({ params, locale = 'en' }) {
   // Get the project data from our utility function
   const project = getProjectData(params.projectSlug);
   
