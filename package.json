@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:single": "NODE_OPTIONS='--max-old-space-size=2048' next build",
     "start": "next start",
     "lint": "next lint",
     "export": "EXPORT=true next build"
@@ -19,5 +20,8 @@
     "nodemailer": "^6.9.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "pm2": "^6.0.8"
   }
 }
