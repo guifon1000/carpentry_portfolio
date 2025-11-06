@@ -18,7 +18,7 @@
     },
     {
       "title": "Adresse",
-      "content": "2606 chemin de Draguignan, 83440 Fayence, France"
+      "content": "Brest, Bretagne, France"
     },
     {
       "title": "Horaires",
@@ -36,12 +36,9 @@
       "message": "Message"
     },
     "services": {
-      "furniture": "Mobilier sur mesure",
-      "kitchen": "Rénovation de cuisine",
-      "builtins": "Étagères intégrées",
-      "flooring": "Planchers en bois",
-      "outdoor": "Structures extérieures",
-      "trim": "Moulures et finitions",
+      "roof_carpentry": "charpente",
+      "wooden_framework": "ossature bois",
+      "custom_design": "conception sur mesure",
       "other": "Autre (veuillez préciser)"
     },
     "buttons": {
