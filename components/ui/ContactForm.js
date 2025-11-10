@@ -125,7 +125,7 @@ export default function ContactForm() {
         />
       </div>
       
-      <div className="form-group">
+{/*       <div className="form-group">
         <label htmlFor="service">{t('form.fields.service', 'Service Interested In')}</label>
         <select
           id="service"
@@ -143,7 +143,7 @@ export default function ContactForm() {
           <option value="trim">{t('form.services.trim', 'Trim & Molding')}</option>
           <option value="other">{t('form.services.other', 'Other (please specify)')}</option>
         </select>
-      </div>
+      </div> */}
       
       <div className="form-group">
         <label htmlFor="message">{t('form.fields.message', 'Message')}</label>

@@ -17,26 +17,25 @@ export default async function handler(req, res) {
     // Create a transport for nodemailer
     // For production, you'd use real SMTP credentials
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || 'smtp.example.com',
-      port: parseInt(process.env.SMTP_PORT || '587'),
+      host: process.env.SMTP_HOST || 'propre.o2switch.net',
+      port: parseInt(process.env.SMTP_PORT || '465'),
       secure: process.env.SMTP_SECURE === 'true',
       auth: {
-        user: process.env.SMTP_USER || 'your-email@example.com',
-        pass: process.env.SMTP_PASSWORD || 'your-password',
+        user: process.env.SMTP_USER || 'guillaume@fontaine-charpente-conception.com',
+        pass: process.env.SMTP_PASSWORD || 'M4U1#I7f3_',
       },
     });
 
     // Email content
     const mailOptions = {
-      from: process.env.SMTP_FROM || 'website@carpentryportfolio.com',
-      to: process.env.CONTACT_EMAIL || 'info@carpentryportfolio.com',
+      from: process.env.SMTP_FROM || 'guillaume@fontaine-charpente-conception.com',
+      to: process.env.CONTACT_EMAIL || 'guillaume@fontaine-charpente-conception.com',
       replyTo: email,
-      subject: `New Contact Form Submission: ${service}`,
+      subject: `New Contact Form Submission:`,
       text: `
         Name: ${name}
         Email: ${email}
         Phone: ${phone || 'Not provided'}
-        Service: ${service}
         
         Message:
         ${message}
@@ -46,7 +45,6 @@ export default async function handler(req, res) {
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
-        <p><strong>Service:</strong> ${service}</p>
         <h3>Message:</h3>
         <p>${message.replace(/\n/g, '<br>')}</p>
       `,
