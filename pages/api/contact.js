@@ -7,10 +7,10 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, email, phone, service, message } = req.body;
+    const { name, email, phone, message } = req.body;
 
     // Validate form data
-    if (!name || !email || !service || !message) {
+    if (!name || !email || !message) {
       return res.status(400).json({ error: 'All fields are required' });
     }
 
