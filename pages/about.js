@@ -18,7 +18,31 @@ export default function About() {
   useEffect(() => {
     setIsClient(true);
   }, []);
-  
+
+  const AboutHero = () => {
+  return (
+    <section className="about-hero">
+      <div className="about-hero__image-container">
+        <img
+          src="/images/trait.jpg"
+          className="about-hero__image"
+        />
+        <div className="about-hero__overlay"></div>
+      </div>
+
+      <div className="about-hero__content">
+        <h1 className="about-hero__title">
+          About Our Craftsmanship
+        </h1>
+        <p className="about-hero__subtitle">
+          rien ici
+        </p>
+      </div>
+    </section>
+  );
+};
+
+
   // Use React.useMemo to ensure consistent rendering between server and client
   const ourStoryContent = React.useMemo(() => {
     const content = t('ourStory.content', { returnObjects: true });
@@ -37,42 +61,45 @@ export default function About() {
   
   return (
     <Layout>
-      <section className="about-hero">
-        <div className="container">
-          <h1>{t('hero.title')}</h1>
-          <p className="lead">{t('hero.subtitle')}</p>
-        </div>
-      </section>
-      
-      <section className="about-content">
-        <div className="container">
-          <div className="about-grid">
-            <div className="about-text">
-              <h2>{t('ourStory.title')}</h2>
-              {isClient && ourStoryContent.map((paragraph, index) => (
-                <p key={index}>{paragraph || ''}</p>
-              ))}
+      <section className="about-page">
+
+        <section className="about-hero">
+          <div className="container">
+            <h1>{t('hero.title')}</h1>
+            <p className="lead">{t('hero.subtitle')}</p>
+          </div>
+        </section>
+        
+        <section className="about-content">
+          <div className="container">
+            <div className="about-grid">
+              <div className="about-text">
+                <h2>{t('ourStory.title')}</h2>
+                {isClient && ourStoryContent.map((paragraph, index) => (
+                  <p key={index}>{paragraph || ''}</p>
+                ))}
+                
+                <h2>{t('ourTeam.title')}</h2>
+                {isClient && ourTeamContent.map((paragraph, index) => (
+                  <p key={index}>{paragraph || ''}</p>
+                ))}
+                
+                <h2>{t('ourApproach.title')}</h2>
+                {isClient && ourApproachContent.map((paragraph, index) => (
+                  <p key={index}>{paragraph || ''}</p>
+                ))}
+              </div>
               
-              <h2>{t('ourTeam.title')}</h2>
-              {isClient && ourTeamContent.map((paragraph, index) => (
-                <p key={index}>{paragraph || ''}</p>
-              ))}
-              
-              <h2>{t('ourApproach.title')}</h2>
-              {isClient && ourApproachContent.map((paragraph, index) => (
-                <p key={index}>{paragraph || ''}</p>
-              ))}
-            </div>
-            
-            <div className="about-image">
-              <img 
-                src={t('image.src') || ''} 
-                alt={t('image.alt') || ''}
-                className="rounded-image" 
-              />
+              <div className="about-image">
+                <img 
+                  src={t('image.src') || ''} 
+                  alt={t('image.alt') || ''}
+                  className="rounded-image" 
+                />
+              </div>
             </div>
           </div>
-        </div>
+        </section>
       </section>
     </Layout>
   );

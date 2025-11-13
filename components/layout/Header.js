@@ -46,6 +46,10 @@ const Header = () => {
           <img src="/images/logo.svg" alt="Logo" className="logo-image" />
         </Link>
       </div>
+
+      <div className="header__background">
+        
+      </div>
       
       <div className="header__nav-container">
         <nav className="header__nav">

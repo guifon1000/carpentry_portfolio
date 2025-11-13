@@ -8,12 +8,10 @@
 
 html,
 body {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: var(--font-body); /* Use variable from variables.css */
   line-height: 1.6;
   font-size: 16px;
-  color: var(--text-color);
-  overflow-x: hidden;
+  color: var(--color-text); /* Use variable from variables.css */
 }
 
 a {
@@ -22,22 +20,23 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-md); /* Replace hardcoded margin */
   font-weight: 600;
   line-height: 1.25;
+  font-family: var(--font-heading); /* Use variable from variables.css */
 }
 
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 var(--spacing-md); /* Use variable from variables.css */
 }
 
 /* Header Styles */
 .header {
-  background-color: rgba(255, 255, 255, 0.95);
-  padding: 0.5rem 1rem;
+  background-color: rgba(255, 237, 195, 0.751); 
+  padding: var(--spacing-xs) var(--spacing-md); /* Use variables from variables.css */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
@@ -48,6 +47,19 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.header__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/trait.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  z-index: -1;
 }
 
 .header--scrolled {
@@ -171,7 +183,13 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 500px;
   display: flex;
   align-items: center;
-  color: white;
+  color: var(--color-text); /* Replace hardcoded color */
+}
+
+.hero__content {
+  max-width: 600px;
+  margin-left: 5%;
+  padding: var(--spacing-lg); /* Use variable from variables.css */
 }
 
 .hero__image-container {
@@ -202,57 +220,64 @@ h1, h2, h3, h4, h5, h6 {
   mix-blend-mode: multiply; /* This helps blend the overlay with the image underneath */
 }
 
-.hero__content {
-  max-width: 600px;
-  margin-left: 5%;
-  padding: 2rem;
-}
 
-.hero__title {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero__subtitle {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-}
 
 .hero__cta {
   margin-top: 2rem;
 }
 
+
+
+.hero__content {
+  max-width: 600px;
+  margin-left: 5%;
+  padding: var(--spacing-lg); /* Replace hardcoded padding */
+}
+
+.hero__title {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md); /* Replace hardcoded margin */
+  font-family: var(--font-heading); /* Use variable from variables.css */
+}
+
+.hero__subtitle {
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-lg); /* Replace hardcoded margin */
+}
+
+
 /* Button Styles */
 .button {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  font-weight: 500;
-  text-align: center;
+  border-radius: var(--border-radius); /* Use variable from variables.css */
+  font-family: var(--font-body); /* Use variable from variables.css */
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all var(--transition-medium); /* Use variable from variables.css */
   cursor: pointer;
-  transition: all 0.3s ease;
+  text-align: center;
 }
 
 .button--primary {
-  background-color: grey;
-  color: black;
-  border: 1px solid black;
+  background-color: var(--color-wood-dark); /* Use variable from variables.css */
+  color: white;
+  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.2);
 }
 
 .button--primary:hover {
-  background-color: var(--primary-hover);
-  border-color: var(--primary-hover);
+  background-color: var(--color-wood-accent); /* Use variable from variables.css */
 }
 
 .button--secondary {
   background-color: transparent;
-  color: var(--primary-color);
-  border: 1px solid var(--primary-color);
+  color: var(--color-wood-dark); /* Use variable from variables.css */
+  border: 2px solid var(--color-wood-dark); /* Use variable from variables.css */
 }
 
 .button--secondary:hover {
-  background-color: var(--primary-color);
-  color: white;
+  background-color: rgba(93, 64, 55, 0.05);
 }
 
 .button--small {
@@ -266,13 +291,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Section Styles */
-section {
-  padding: 4rem 0;
+.section {
+  padding: var(--spacing-xl) 0; /* Use variable from variables.css */
 }
 
-section h2 {
+.section h2 {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-lg); /* Use variable from variables.css */
 }
 
 
@@ -285,20 +310,26 @@ section h2 {
 
 .project-card {
   background-color: white;
-  border-radius: 8px;
+  border-radius: var(--border-radius); /* Use variable from variables.css */
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: var(--shadow-light); /* Use variable from variables.css */
+  transition: transform var(--transition-medium), /* Use variable from variables.css */
+              box-shadow var(--transition-medium); /* Use variable from variables.css */
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow-medium); /* Use variable from variables.css */
+}
+
+.project-card__image-container {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
 }
 
 .project-card__image {
-  height: 200px;
-  overflow: hidden;
+  transition: transform var(--transition-medium); /* Use variable from variables.css */
 }
 
 .project-card__image img {
@@ -308,7 +339,7 @@ section h2 {
   transition: transform 0.5s ease;
 }
 
-.project-card:hover .project-card__image img {
+.project-card:hover .project-card__image {
   transform: scale(1.05);
 }
 
@@ -317,7 +348,10 @@ section h2 {
 }
 
 .project-card__title {
-  margin-bottom: 0.5rem;
+  font-family: var(--font-heading); /* Use variable from variables.css */
+  color: var(--color-wood-dark); /* Use variable from variables.css */
+  margin: var(--spacing-sm) var(--spacing-sm) var(--spacing-xs); /* Use variables from variables.css */
+  font-size: 1.25rem;
 }
 
 .project-card__description {
@@ -345,6 +379,13 @@ section h2 {
 
 .project-card__link:hover::after {
   width: 100%;
+}
+
+.project-card__category {
+  font-family: var(--font-technical); /* Use variable from variables.css */
+  font-size: 0.875rem;
+  color: var(--color-text-light); /* Use variable from variables.css */
+  margin: 0 var(--spacing-sm) var(--spacing-sm); /* Use variables from variables.css */
 }
 
 /* Footer Styles */
@@ -386,7 +427,68 @@ section h2 {
 }
 
 /* About Page Styles */
-.about-hero,
+.about-page {
+  background-image: url('/images/trait.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* Ensure the background covers the full height of the page */
+  color: var(--color-text-light); /* Use variable from variables.css */
+}
+
+
+.about-hero {
+  position: relative;
+  /*height: 80vh; */
+  /*min-height: 500px;*/
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.about-hero__image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.about-hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/overlay-texture.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+  mix-blend-mode: multiply;
+}
+
+.about-hero__content {
+  max-width: 600px;
+  margin-left: 5%;
+  padding: 2rem;
+}
+
+.about-hero__title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.about-hero__subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
 .portfolio-hero,
 .contact-hero,
 .project-hero {
@@ -647,45 +749,19 @@ section h2 {
 }
 
 /* Responsive Styles */
-@media (max-width: 1100px) {
-  .logo-image {
-    height: 120px;
-  }
-  
-  .nav__list {
-    gap: 1.5rem;
-  }
-}
-
-@media (max-width: 992px) {
-  .project-grid,
-  .about-grid,
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .project-info {
-    order: -1;
-  }
-  
-  .logo-image {
-    height: 100px;
-  }
-}
-
 @media (max-width: 768px) {
   .mobile-menu-toggle {
     display: block;
   }
-  
+
   .header__logo {
     order: 2;
   }
-  
+
   .mobile-menu-toggle {
     order: 0;
   }
-  
+
   .header__nav-container {
     position: fixed;
     top: 0;
@@ -702,94 +778,42 @@ section h2 {
     z-index: 10;
     order: 1;
   }
-  
+
   .mobile-menu-open .header__nav-container {
     left: 0;
   }
-  
+
   .nav__list {
     flex-direction: column;
     gap: 1.5rem;
     width: 100%;
   }
-  
+
   .nav__list li {
     width: 100%;
     border-bottom: 1px solid #eee;
     padding-bottom: 0.75rem;
   }
-  
+
   .language-toggle {
     margin: 1.5rem 0 0;
   }
-  
+
   .hero__title {
     font-size: 2.5rem;
   }
-  
+
   .hero__content {
     margin-left: 0;
     text-align: center;
     max-width: 100%;
   }
-  
+
   section {
     padding: 3rem 0;
   }
-  
-  .footer-content {
-    grid-template-columns: 1fr;
-  }
-}
 
-@media (max-width: 576px) {
-  .header {
-    padding: 0.5rem;
-  }
-  
-  .logo-image {
-    height: 60px;
-  }
-  
-  .hero {
-    height: 70vh;
-    min-height: 400px;
-  }
-  
-  .hero__title {
-    font-size: 2rem;
-  }
-  
-  .hero__subtitle {
-    font-size: 1rem;
-  }
-  
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .container {
-    padding: 0 0.75rem;
-  }
-  
-  section {
-    padding: 2rem 0;
-  }
-  
-  .about-hero, 
-  .portfolio-hero, 
-  .contact-hero, 
-  .project-hero {
-    padding: 2.5rem 0;
-  }
-  
-  .form-group input,
-  .form-group textarea,
-  .form-group select {
-    padding: 0.5rem;
-  }
-  
-  .project-images {
+  .footer-content {
     grid-template-columns: 1fr;
   }
 }

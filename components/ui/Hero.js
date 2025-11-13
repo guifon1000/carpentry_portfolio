@@ -9,8 +9,7 @@ const Hero = () => {
     <section className="hero">
       <div className="hero__image-container">
         <img 
-          src="/images/hero-carpentry.jpg" 
-          alt="Showcase of fine carpentry work" 
+          src=" " 
           className="hero__image" 
         />
         <div className="hero__overlay"></div>

@@ -10,8 +10,8 @@
   --color-text-light: #757575;
   
   /* Typography */
-  --font-heading: 'Playfair Display', serif;
-  --font-body: 'Source Sans Pro', sans-serif;
+  --font-heading: 'Roboto Mono', monospace;
+  --font-body: 'Roboto Mono', monospace;
   --font-technical: 'Roboto Mono', monospace;
   
   /* Spacing */
