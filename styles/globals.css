@@ -226,14 +226,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 2rem;
 }
 
-
-
-.hero__content {
-  max-width: 600px;
-  margin-left: 5%;
-  padding: var(--spacing-lg); /* Replace hardcoded padding */
-}
-
 .hero__title {
   font-size: 3rem;
   margin-bottom: var(--spacing-md); /* Replace hardcoded margin */
@@ -433,7 +425,7 @@ h1, h2, h3, h4, h5, h6 {
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh; /* Ensure the background covers the full height of the page */
-  color: rgb(255, 213, 213); /* Use variable from variables.css */
+  color: white; /* Use variable from variables.css */
 }
 
 
@@ -492,8 +484,8 @@ h1, h2, h3, h4, h5, h6 {
 .portfolio-hero,
 .contact-hero,
 .project-hero {
-  background-color: var(--dark-bg);
-  color: white;
+  background-color: rgb(255, 213, 128);
+  color: --dark-bg;
   padding: 4rem 0;
   text-align: center;
 }

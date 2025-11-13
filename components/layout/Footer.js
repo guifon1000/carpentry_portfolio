@@ -7,30 +7,29 @@ export default function Footer() {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3>Carpentry Portfolio</h3>
-            <p>Quality craftsmanship for your home and business.</p>
+            <h3>Guillaume Fontaine</h3>
+            <p>Charpente, Conception Bois</p>
           </div>
           
           <div className="footer-section">
-            <h3>Quick Links</h3>
+            <h3>Pages</h3>
             <ul>
-              <li><Link href="/" className="footer-link">Home</Link></li>
+              <li><Link href="/" className="footer-link">Accueil</Link></li>
               <li><Link href="/portfolio" className="footer-link">Portfolio</Link></li>
-              <li><Link href="/about" className="footer-link">About</Link></li>
+              <li><Link href="/about" className="footer-link">A propos</Link></li>
               <li><Link href="/contact" className="footer-link">Contact</Link></li>
             </ul>
           </div>
           
           <div className="footer-section">
             <h3>Contact</h3>
-            <p>info@carpentryportfolio.com</p>
-            <p>(123) 456-7890</p>
-            <p>123 Woodworking Ave, Craftstown, CT 12345</p>
+            <p>guillaume@fontaine-charpente-conception.com</p>
+            <p>Plougonvelin, Bretagne</p>
           </div>
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Carpentry Portfolio. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Website by Atuin Engineering. All rights reserved.</p>
         </div>
       </div>
     </footer>

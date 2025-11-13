@@ -36,8 +36,8 @@ export default function Portfolio({ projects, categories }) {
     <Layout>
       <section className="portfolio-hero">
         <div className="container">
-          <h1>Our Portfolio</h1>
-          <p className="lead">Explore our past projects and craftsmanship</p>
+          <h1>Portfolio</h1>
+          <p className="lead">Expériences diverses</p>
         </div>
       </section>
       

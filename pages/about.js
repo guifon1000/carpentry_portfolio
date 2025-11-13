@@ -14,33 +14,10 @@ export async function getStaticProps({ locale = 'en' }) {
 export default function About() {
   const { t } = useTranslation('about');
   const [isClient, setIsClient] = useState(false);
-  
+
   useEffect(() => {
     setIsClient(true);
   }, []);
-
-  const AboutHero = () => {
-  return (
-    <section className="about-hero">
-      <div className="about-hero__image-container">
-        <img
-          src="/images/trait.jpg"
-          className="about-hero__image"
-        />
-        <div className="about-hero__overlay"></div>
-      </div>
-
-      <div className="about-hero__content">
-        <h1 className="about-hero__title">
-          About Our Craftsmanship
-        </h1>
-        <p className="about-hero__subtitle">
-          rien ici
-        </p>
-      </div>
-    </section>
-  );
-};
 
 
   // Use React.useMemo to ensure consistent rendering between server and client

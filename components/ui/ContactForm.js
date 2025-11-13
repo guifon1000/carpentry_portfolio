@@ -58,10 +58,12 @@ export default function ContactForm() {
       });
       
     } catch (error) {
-      console.error('Form submission error:', error);
-      setFormStatus({ 
-        submitting: false, 
-        submitted: false, 
+      if (process.env.NODE_ENV === 'development') {
+        console.error('Form submission error:', error);
+      }
+      setFormStatus({
+        submitting: false,
+        submitted: false,
         error: error.message || 'Failed to send message. Please try again.'
       });
     }
@@ -124,27 +126,7 @@ export default function ContactForm() {
           onChange={handleChange}
         />
       </div>
-      
-{/*       <div className="form-group">
-        <label htmlFor="service">{t('form.fields.service', 'Service Interested In')}</label>
-        <select
-          id="service"
-          name="service"
-          value={formData.service}
-          onChange={handleChange}
-          required
-        >
-          <option value="">{t('form.fields.selectService', 'Select a service')}</option>
-          <option value="custom-furniture">{t('form.services.furniture', 'Custom Furniture')}</option>
-          <option value="kitchen">{t('form.services.kitchen', 'Kitchen Renovations')}</option>
-          <option value="built-ins">{t('form.services.builtins', 'Built-in Shelving')}</option>
-          <option value="flooring">{t('form.services.flooring', 'Wooden Floors')}</option>
-          <option value="outdoor">{t('form.services.outdoor', 'Outdoor Structures')}</option>
-          <option value="trim">{t('form.services.trim', 'Trim & Molding')}</option>
-          <option value="other">{t('form.services.other', 'Other (please specify)')}</option>
-        </select>
-      </div> */}
-      
+
       <div className="form-group">
         <label htmlFor="message">{t('form.fields.message', 'Message')}</label>
         <textarea

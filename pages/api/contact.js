@@ -49,20 +49,15 @@ export default async function handler(req, res) {
       `,
     };
 
-    // For development without actual email sending
-    if (false) { //(process.env.NODE_ENV !== 'production') {
-      console.log('Email would be sent in production:');
-      console.log(mailOptions);
-      return res.status(200).json({ success: true, demo: true });
-    }
-
     // Send the email
     await transporter.sendMail(mailOptions);
 
     // Return success
     res.status(200).json({ success: true });
   } catch (error) {
-    console.error('Contact form error:', error);
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Contact form error:', error);
+    }
     res.status(500).json({ error: 'Failed to send message' });
   }
 }
