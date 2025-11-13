@@ -67,13 +67,7 @@ export default function About() {
                 ))}
               </div>
               
-              <div className="about-image">
-                <img 
-                  src={t('image.src') || ''} 
-                  alt={t('image.alt') || ''}
-                  className="rounded-image" 
-                />
-              </div>
+
             </div>
           </div>
         </section>
