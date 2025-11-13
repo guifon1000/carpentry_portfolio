@@ -433,7 +433,7 @@ h1, h2, h3, h4, h5, h6 {
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh; /* Ensure the background covers the full height of the page */
-  color: var(--color-text-light); /* Use variable from variables.css */
+  color: rgb(255, 213, 213); /* Use variable from variables.css */
 }
 
 
