@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import Layout from '../components/layout/Layout';
@@ -13,12 +13,6 @@ export async function getStaticProps({ locale = 'en' }) {
 
 export default function About() {
   const { t } = useTranslation('about');
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
 
   // Use React.useMemo to ensure consistent rendering between server and client
   const ourStoryContent = React.useMemo(() => {
@@ -52,17 +46,17 @@ export default function About() {
             <div className="about-grid">
               <div className="about-text">
                 <h2>{t('ourStory.title')}</h2>
-                {isClient && ourStoryContent.map((paragraph, index) => (
+                {ourStoryContent.map((paragraph, index) => (
                   <p key={index}>{paragraph || ''}</p>
                 ))}
                 
                 <h2>{t('ourTeam.title')}</h2>
-                {isClient && ourTeamContent.map((paragraph, index) => (
+                {ourTeamContent.map((paragraph, index) => (
                   <p key={index}>{paragraph || ''}</p>
                 ))}
                 
                 <h2>{t('ourApproach.title')}</h2>
-                {isClient && ourApproachContent.map((paragraph, index) => (
+                {ourApproachContent.map((paragraph, index) => (
                   <p key={index}>{paragraph || ''}</p>
                 ))}
               </div>

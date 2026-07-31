@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import Layout from '../components/layout/Layout';
@@ -21,13 +21,6 @@ export async function getStaticProps({ locale = 'en' }) {
 export default function Home({ featuredProjects }) {
   const { t: homeT } = useTranslation('home');
   
-  // Client-side only rendering to avoid hydration issues
-  const [isClient, setIsClient] = useState(false);
-  
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-  
   return (
     <Layout>
       <Hero />
@@ -36,7 +29,7 @@ export default function Home({ featuredProjects }) {
         <div className="container">
           <h2>{homeT('projects.title', 'Featured Projects')}</h2>
           <div className="projects-grid">
-            {isClient && featuredProjects.map((project, index) => (
+            {featuredProjects.map((project, index) => (
               <ProjectCard 
                 key={project.id || index}
                 title={project.title || ''}

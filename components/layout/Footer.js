@@ -24,7 +24,7 @@ export default function Footer() {
           <div className="footer-section">
             <h3>Contact</h3>
             <p>guillaume@fontaine-charpente-conception.com</p>
-            <p>Plougonvelin, Bretagne</p>
+            <p>Brest, Bretagne</p>
           </div>
         </div>
         
