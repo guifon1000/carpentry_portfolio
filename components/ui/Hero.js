@@ -9,8 +9,8 @@ const Hero = () => {
     <section className="hero">
       <div className="hero__image-container">
         <img
-          src={t('hero.image.src') || '/images/hero-default.jpg'}
-          /*alt={t('hero.image.alt') || 'Carpentry showcase'}*/
+          src={t('hero.image.src', { defaultValue: '/images/hero-carpentry.jpg' })}
+          alt={t('hero.image.alt', { defaultValue: 'Charpente traditionnelle' })}
           className="hero__image"
         />
         <div className="hero__overlay"></div>

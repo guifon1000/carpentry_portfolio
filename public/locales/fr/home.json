@@ -2,32 +2,16 @@
   "hero": {
     "title": "Fontaine : Charpente & Conception",
     "subtitle": "Charpente traditionnelle et Ossature bois",
-    "cta": "Projets"
+    "cta": "Projets",
+    "image": {
+      "src": "/images/hero-carpentry.jpg",
+      "alt": "Charpente traditionnelle"
+    }
   },
   "services": {
     "title": "Services"
   },
   "projects": {
-    "title": "Projets à la Une",
-    "items": [
-      {
-        "title": "Meubles de Cuisine Modernes",
-        "description": "Armoires de cuisine personnalisées avec finitions premium.",
-        "imageUrl": "/images/placeholder.jpg",
-        "slug": "modern-kitchen-cabinets"
-      },
-      {
-        "title": "Terrasse Extérieure",
-        "description": "Terrasse spacieuse avec sièges intégrés et pergola.",
-        "imageUrl": "/images/placeholder.jpg",
-        "slug": "outdoor-deck"
-      },
-      {
-        "title": "Bibliothèque Intégrée",
-        "description": "Bibliothèque personnalisée de mur à mur avec éclairage intégré.",
-        "imageUrl": "/images/placeholder.jpg",
-        "slug": "built-in-bookshelf"
-      }
-    ]
+    "title": "Projets à la Une"
   }
 }

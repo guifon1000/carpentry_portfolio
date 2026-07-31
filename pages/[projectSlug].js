@@ -7,8 +7,17 @@ import Link from 'next/link';
 import Button from '../components/ui/Button';
 import { getAllProjectSlugs, getProjectData } from '../utils/portfolioUtils';
 
-// For server-side rendering instead of static generation
-export async function getServerSideProps({ params, locale = 'en' }) {
+// Static generation: one page per project and per locale
+export async function getStaticPaths() {
+  const locales = ['en', 'fr'];
+  const paths = getAllProjectSlugs().flatMap(({ params }) =>
+    locales.map(locale => ({ params, locale }))
+  );
+
+  return { paths, fallback: false };
+}
+
+export async function getStaticProps({ params, locale = 'en' }) {
   // Get the project data from our utility function
   const project = getProjectData(params.projectSlug);
   

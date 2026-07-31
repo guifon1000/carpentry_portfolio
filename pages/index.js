@@ -6,7 +6,7 @@ import Hero from '../components/ui/Hero';
 import ProjectCard from '../components/ui/ProjectCard';
 import { getFeaturedProjects } from '../utils/portfolioUtils';
 
-export async function getServerSideProps({ locale = 'en' }) {
+export async function getStaticProps({ locale = 'en' }) {
   // Get featured projects
   const featuredProjects = getFeaturedProjects();
   

@@ -10,15 +10,15 @@
   "contactInfo": [
     {
       "title": "Email",
-      "content": "guillaume.fontai@gmail.com"
+      "content": "guillaume@fontaine-charpente-conception.com"
     },
     {
       "title": "Phone",
-      "content": "(+33) 6 40 48 27 18"
+      "content": "+33 6 40 48 27 18"
     },
     {
       "title": "Address",
-      "content": "2606 chemin de Draguignan, 83440 Fayence, France"
+      "content": "Brest, Brittany, France"
     },
     {
       "title": "Hours",
@@ -36,12 +36,9 @@
       "message": "Message"
     },
     "services": {
-      "furniture": "Custom Furniture",
-      "kitchen": "Kitchen Renovations",
-      "builtins": "Built-in Shelving",
-      "flooring": "Wooden Floors",
-      "outdoor": "Outdoor Structures",
-      "trim": "Trim & Molding",
+      "roof_carpentry": "Timber framing",
+      "wooden_framework": "Wood frame construction",
+      "custom_design": "Custom design",
       "other": "Other (please specify)"
     },
     "buttons": {

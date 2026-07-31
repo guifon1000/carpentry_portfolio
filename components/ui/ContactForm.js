@@ -32,19 +32,26 @@ export default function ContactForm() {
     setFormStatus({ submitting: true, submitted: false, error: null });
     
     try {
-      // Send data to our API endpoint
-      const response = await fetch('/api/contact', {
+      // Send data to Web3Forms (no backend required)
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
+          subject: `Nouveau message de ${formData.name} — fontaine-charpente-conception.com`,
+          from_name: 'Site Charpente',
+          replyto: formData.email,
+          ...formData,
+        }),
       });
       
       const result = await response.json();
       
-      if (!response.ok) {
-        throw new Error(result.error || 'Something went wrong');
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || 'Something went wrong');
       }
       
       // Handle success
